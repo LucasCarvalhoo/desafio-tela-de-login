@@ -22,4 +22,3 @@
   Todo o conteúdo textual deve estar em português.
     
   O código deve conter apenas o que foi solicitado acima, sem interações JS ou scripts adicionais.
-```
