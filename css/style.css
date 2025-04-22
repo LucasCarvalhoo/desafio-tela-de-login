@@ -1,0 +1,95 @@
+/* Esconder o checkbox real */
+.theme-toggle {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Estilizar o container do tema */
+  .theme-container {
+    min-height: 100vh;
+    background-color: hsl(var(--b3));
+  }
+  
+  /* Tema escuro (padrão) */
+  .theme-container {
+    --pf: 262 80% 43%;
+    --p: 262 80% 50%;
+    --pc: 0 0% 100%;
+    --s: 316 70% 50%;
+    --sc: 0 0% 100%;
+    --a: 175 70% 41%;
+    --ac: 0 0% 100%;
+    --n: 213 18% 20%;
+    --nf: 212 17% 17%;
+    --nc: 220 13% 95%;
+    --b1: 212 18% 14%;
+    --b2: 213 18% 12%;
+    --b3: 213 18% 10%;
+    --bc: 220 13% 95%;
+  }
+  
+  /* Tema claro (quando checkbox marcado) */
+  .theme-toggle:checked ~ .theme-container {
+    --pf: 262 80% 40%;
+    --p: 262 80% 50%;
+    --pc: 0 0% 100%;
+    --s: 316 70% 50%;
+    --sc: 0 0% 100%;
+    --a: 175 70% 41%;
+    --ac: 0 0% 100%;
+    --n: 213 18% 30%;
+    --nf: 212 17% 25%;
+    --nc: 0 0% 100%;
+    --b1: 0 0% 100%;
+    --b2: 0 0% 95%;
+    --b3: 0 0% 90%;
+    --bc: 0 0% 20%;
+  }
+  
+  /* Estilizar o toggle personalizado */
+  .theme-toggle-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .toggle-icon {
+    font-size: 1.25rem;
+  }
+  
+  /* Estilo para o switch personalizado */
+  .custom-switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    background-color: hsl(var(--n));
+    border-radius: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  /* Bolinha do switch */
+  .custom-switch::after {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  /* Mover a bolinha quando o checkbox estiver marcado */
+  .theme-toggle:checked ~ .theme-container .custom-switch::after {
+    transform: translateX(1.5rem);
+  }
+  
+  /* Mudar a cor de fundo quando o checkbox estiver marcado */
+  .theme-toggle:checked ~ .theme-container .custom-switch {
+    background-color: hsl(var(--p));
+  }

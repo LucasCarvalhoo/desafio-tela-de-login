@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de login do PortalSeguro - acesse sua conta com segurança">
+  <meta name="keywords" content="login, acesso, conta, segurança">
+  <title>Login - PortalSeguro</title>
+  
+  <!-- TailwindCSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- DaisyUI via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Checkbox para alternar o tema -->
+  <input type="checkbox" id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+  
+  <!-- Container com o tema aplicado -->
+  <div class="theme-container">
+    <main class="container mx-auto px-4 py-8 flex flex-col items-center justify-center min-h-screen">
+      <div class="card w-full max-w-md bg-base-100 shadow-xl">
+        <div class="card-body">
+          <!-- Cabeçalho com nome do sistema -->
+          <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-primary">
+              <span class="text-4xl">🔐</span> PortalSeguro
+            </h1>
+            <p class="text-base-content opacity-70 mt-2">Acesse sua conta com segurança</p>
+          </header>
+          
+          <!-- Alternador de tema -->
+          <div class="flex justify-end mb-4">
+            <label for="theme-toggle" class="theme-toggle-label">
+              <span class="toggle-icon">🌙</span>
+              <span class="custom-switch"></span>
+              <span class="toggle-icon">☀️</span>
+            </label>
+          </div>
+          
+          <!-- Formulário de login -->
+          <form action="#" method="post">
+            <div class="form-control">
+              <label for="email" class="label">
+                <span class="label-text">E-mail</span>
+              </label>
+              <div class="flex items-center gap-3">
+                <span class="text-base-content opacity-70 text-xl">
+                  ✉️
+                </span>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="seu@email.com" 
+                  class="input input-bordered w-full" 
+                  required 
+                  aria-required="true"
+                >
+              </div>
+            </div>
+            
+            <div class="form-control mt-4">
+              <label for="senha" class="label">
+                <span class="label-text">Senha</span>
+              </label>
+              <div class="flex items-center gap-3">
+                <span class="text-base-content opacity-70 text-xl">
+                  🔒
+                </span>
+                <input 
+                  type="password" 
+                  id="senha" 
+                  name="senha" 
+                  placeholder="••••••••" 
+                  class="input input-bordered w-full" 
+                  required 
+                  aria-required="true"
+                  minlength="8"
+                >
+              </div>
+            </div>
+            
+            <div class="flex justify-between items-center mt-4">
+              <div class="form-control">
+                <label class="label cursor-pointer">
+                  <input 
+                    type="checkbox" 
+                    id="lembrar" 
+                    name="lembrar" 
+                    class="checkbox checkbox-primary" 
+                    aria-label="Lembrar-me"
+                  >
+                  <span class="label-text ml-2">Lembrar-me</span>
+                </label>
+              </div>
+              
+              <a href="#" class="text-sm text-primary hover:underline">
+                Esqueci minha senha
+              </a>
+            </div>
+            
+            <div class="form-control mt-6">
+              <button 
+                type="submit" 
+                class="btn btn-primary w-full"
+                aria-label="Entrar na conta"
+              >
+                Entrar
+              </button>
+            </div>
+          </form>
+          
+          <div class="divider mt-6">OU</div>
+          
+          <div class="text-center">
+            <p>Não tem uma conta?</p>
+            <a href="#" class="btn btn-outline btn-primary mt-2 w-full">
+              Criar conta
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="mt-8 text-center text-base-content opacity-70">
+        <p>&copy; 2023 PortalSeguro. Todos os direitos reservados.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
